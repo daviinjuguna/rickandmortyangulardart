@@ -1,0 +1,41 @@
+<!-- <material-list class="pokelist" size="small" *ngIf="characters!=null">
+  <material-list-item
+    class="mdc-card mdc-card--outlined"
+    *ngFor="let char of characters"
+  >
+    {{char.name}}
+  </material-list-item>
+</material-list> -->
+
+<div class="pokegrid">
+  <div class="container">
+    <div class="jumbtron jumbtron-fluid">
+      <div class="pokelist1">
+        <h3 style="text-align: center" class="mb-5">Rick and Morty App</h3>
+        <p class="lead">
+          <ul class="list-group" *ngIf="characters!=null">
+            <li class="list-group-item text-wrap"  *ngFor="let char of characters" (click)="onSelect(char)">
+              <img id="mypoke" src="{{char.image}}">{{char.name}}
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pokelist2" *ngIf="character!=null">
+    <div class="card">
+      <img src="{{character.image}}" alt="{{character.name}}">
+      <div class="card-body">
+        <h5 class="card-title">{{character.name}}</h5>
+        <b>Gender: </b>
+        <p class="card-text">{{character.gender}}</p>
+        <b>Status: </b>
+        <p class="card-text">{{character.status}}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">{{character.species}}</small>
+    </div>
+    </div>
+  </div>
+</div>
